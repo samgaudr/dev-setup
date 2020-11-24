@@ -23,6 +23,8 @@ do
   read -p "Do you want to install $software_name [y/N]? " -r
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
+    echo -e "${COLOR}Installing $software_name...${NOCOLOR}"
     source $file
+    echo -e "${COLOR}Done!${NOCOLOR}"
   fi
 done

@@ -1,6 +1,3 @@
-
-echo -e "${COLOR}Installing Git...${NOCOLOR}"
-
 git_user_name=$(set_parameter "Git user name" "")
 git_user_email=$(set_parameter "Git user email" "")
 git_credential_helper="store"
@@ -9,7 +6,7 @@ bashrc="$(eval echo ~${SUDO_USER})/.bashrc"
 
 apt install git -y
 
-echo -e "${COLOR}Configuring Git...${NOCOLOR}"
+echo -e "${COLOR}Configuring $software_name...${NOCOLOR}"
 git config --global user.name "$git_user_name"
 git config --global user.email "$git_user_email"
 git config --global credential.helper $git_credential_helper
@@ -27,5 +24,3 @@ mv temp $bashrc
 
 #Replace PS1
 sed -i -ne '/if \[ "\$color_prompt" = yes \]; then/ {p; r ./config/ps1' -e ':a; n; /fi/ {p; b}; ba}; p' $bashrc
-
-echo -e "${COLOR}Done!${NOCOLOR}"
