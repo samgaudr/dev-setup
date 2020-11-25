@@ -23,7 +23,7 @@ do
   if [[ $REPLY =~ ^[Yy]$ ]]
   then
     echo -e "${COLOR}Installing $software_name...${NOCOLOR}"
-    source $file
+    source "$file"
     echo -e "${COLOR}Done!${NOCOLOR}"
   fi
 done
