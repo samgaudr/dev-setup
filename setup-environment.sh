@@ -5,7 +5,6 @@ NOCOLOR="\033[0m"
 
 function set_parameter {
   read -p "$1 [$2]?: " -r
-  echo
   if [ -z "$REPLY" ]
   then
     echo $2
