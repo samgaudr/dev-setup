@@ -13,7 +13,9 @@ tar -C /usr/local -xzf $go_package
 rm -rf $go_package
 
 echo -e "${COLOR}Creating $software_name workspace...${NOCOLOR}"
-mkdir -p "$go_workspace/{bin,src,pkg}"
+mkdir -p "$go_workspace/bin"
+mkdir -p "$go_workspace/src"
+mkdir -p "$go_workspace/pkg"
 
 echo -e "${COLOR}Exporting $software_name environment variable...${NOCOLOR}"
 touch $go_init_file
