@@ -16,6 +16,7 @@ echo -e "${COLOR}Creating $software_name workspace...${NOCOLOR}"
 mkdir -p "$go_workspace/bin"
 mkdir -p "$go_workspace/src"
 mkdir -p "$go_workspace/pkg"
+chown ${SUDO_USER} "$go_workspace" -R
 
 echo -e "${COLOR}Exporting $software_name environment variable...${NOCOLOR}"
 touch $go_init_file
