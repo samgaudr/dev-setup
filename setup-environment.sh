@@ -30,6 +30,8 @@ RUNNING_USER=$(cat $TEMP_USER_FILE)
 rm $TEMP_HOME_FILE
 rm $TEMP_USER_FILE
 
+apt update
+
 for file in ./scripts/*
 do
   software_name=$(basename "$file")
