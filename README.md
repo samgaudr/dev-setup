@@ -22,3 +22,5 @@ echo "UUID=<DISK_UUID> /mnt/data ntfs defaults,nls=utf8,umask=000,dmask=000,fmas
 ## TODO
 
  - Install latest docker compose version (not fixed version)
+ - Install script for Java
+ - VSCode plugin

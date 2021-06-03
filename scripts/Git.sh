@@ -7,10 +7,12 @@ bashrc="$(eval echo ~${SUDO_USER})/.bashrc"
 apt install git -y
 
 echo -e "${COLOR}Configuring $software_name...${NOCOLOR}"
+rm ~/.gitconfig
 git config --global user.name "$git_user_name"
 git config --global user.email "$git_user_email"
 git config --global credential.helper $git_credential_helper
 git config --global core.editor $git_core_editor
+mv ~/.gitconfig $USER_HOME/.gitconfig
 
 
 echo -e "${COLOR}Replacing PS1...${NOCOLOR}"
